@@ -38,10 +38,7 @@ const ServiceDown = () => {
                 <div key={index} className="flex flex-col items-center">
                   <div className="text-3xl">{x.title}</div>
                   <div>
-                    <CircularProgression
-                      serviceTab={serviceTab}
-                      index={index}
-                    />
+                    <CircularProgression serviceTab={serviceTab} index={index}  />
                   </div>
                 </div>
               );

@@ -35,9 +35,9 @@ const CircularProgression = ({ serviceTab, index }) => {
     };
   }, [percentages, serviceTab]);
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="m-10">
       {" "}
-      <CircularProgressbar
+      <CircularProgressbar 
         value={percentages[index]}
         text={`${percentages[index]}%`}
       />
