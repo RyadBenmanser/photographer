@@ -1,21 +1,22 @@
+"use client";
 import React from "react";
+import CircularProgression from "./CircularProgression";
 
 const ServiceDown = () => {
   const serviceTab = [
     {
-      value: "90",
+      value: 90,
       title: "CREATION",
     },
     {
-      value: "80",
+      value: 80,
       title: "DEVELOPMENT",
     },
     {
-      value: "75",
+      value: 75,
       title: "PRODUCTION",
     },
   ];
-
   return (
     <div className="my-24 w-full">
       <div className="container mx-auto w-full flex items-center flex-wrap lg:flex-nowrap">
@@ -36,21 +37,17 @@ const ServiceDown = () => {
               return (
                 <div key={index} className="flex flex-col items-center">
                   <div className="text-3xl">{x.title}</div>
-                  <div
-                    className="radial-progress my-4"
-                    style={{
-                      "--value": x.value,
-                      "--size": "12rem",
-                      "--thickness": "12px",
-                    }}
-                  >
-                    {x.value}%
+                  <div>
+                    <CircularProgression
+                      serviceTab={serviceTab}
+                      index={index}
+                    />
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="lg:w-96 mx-auto  mt-20 lg:ml-12 text-lg font-semibold">
+          <div className="lg:w-96 mx-auto mt-20 lg:ml-12 text-lg font-semibold">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in Bookmarksgrove right at the coast.

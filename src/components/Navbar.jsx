@@ -41,7 +41,7 @@ const Navbar = () => {
       <ul className="list-disc flex flex-col gap-5 fixed right-0 top-0 bottom-0 justify-center sm:m-10 m-3 ">
         {menu.map((x, index) => {
           return (
-            <Link
+            <a
               href={x.url}
               key={index}
               className="flex items-center flex-row-reverse group "
@@ -52,7 +52,7 @@ const Navbar = () => {
               >
                 {x.name}
               </p>
-            </Link>
+            </a>
           );
         })}
       </ul>
